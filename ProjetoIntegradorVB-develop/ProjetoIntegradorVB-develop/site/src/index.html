@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="script/bikestore_brands.js"></script>
+  <script src="script/dropdownBtn.js"></script>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/dropdownBtn.css">
+  <title>BIke Analysis</title>
+</head>
+
+<body>
+  <section class='menu-container'>
+    <h1>bike analysis</h1>
+    <nav>
+      <ul>
+        <li id='menuMarcas' class='item' data='marcas'>
+          <div class="dropdown">
+            <button onclick="toggleMarcas()" class="dropbtn">Marcas</button>
+            <div id="dropdownMarcas" class="dropdown-content"> </div>
+          </div>
+        </li>
+        <li class='item' data='vendas'>
+          <div class="dropdown">
+            <button class="dropbtn">Vendas</button>
+            <div id="dropdownVendas" class="dropdown-content"> </div>
+          </div>
+        </li>
+        <li class='item' data='vendedores'>
+          <div class="dropdown">
+            <button class="dropbtn">Vendedores</button>
+            <div id="dropdownVendedores" class="dropdown-content"> </div>
+          </div>
+        </li>
+        <li class='item' data='lojas'>
+          <div class="dropdown">
+            <button class="dropbtn">Lojas</button>
+            <div id="dropdownLojas" class="dropdown-content"> </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <section class='content-container'>
+    <h2>Vendas</h2>
+    <ul class="content-list">
+      <li>PRODUTO</li>
+      <li>PERÍODO</li>
+      <li>MARCA</li>
+      <li>COLABORADOR</li>
+    </ul>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+  </section>
+
+
+  <div id="vendas-Produto">
+    <div class='header-content'>
+      <div class="header">
+          <h3>Vendas por produto</h3>
+          <p>Lista dos produtos mais vendidos.</p>
+        <!--listar 5 produtos mais vendidos e quantidade-->
+      </div>
+    </div>
+  </div> 
+
+  <div id="vendas-Periodo">
+    <div class="header-content">
+      <div class="header">
+          <h3>Vendas por periodo</h3>
+          <p>Lista dos produtos mais vendidos por mês.</p>
+        <!--listar produto mais vendido e o mês de ref.-->
+      </div>
+    </div>
+  </div> 
+
+  <div id="vendas-Marca">
+    <div class="header-content">
+      <div class="header">
+          <h3>Vendas por marca</h3>
+          <p>Marcas mais vendidas.</p>
+        <!--listar produto mais vendido de cada marca-->
+      </div>
+    </div>
+  </div> 
+
+  <div id="vendas-Colaborador">
+    <div class="header-content">
+      <div class="header">
+          <h3>Vendas por colaborador</h3>
+          <p>Colaboradores com mais vendas.</p>
+        <!--ranking dos colabores e quantidade de vendas relacionadas e eles-->
+      </div>
+    </div>
+  </div> 
+
+
+
+</body>
+
+</html>

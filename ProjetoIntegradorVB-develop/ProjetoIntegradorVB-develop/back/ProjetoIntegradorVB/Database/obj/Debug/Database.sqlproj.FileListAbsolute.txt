@@ -1,0 +1,10 @@
+C:\Users\robso\source\repos\ProjetoIntegradorVB\Database\bin\Debug\Database.dacpac
+C:\Users\robso\source\repos\ProjetoIntegradorVB\Database\bin\Debug\Database.dll
+C:\Users\robso\source\repos\ProjetoIntegradorVB\Database\bin\Debug\Database.pdb
+C:\Users\robso\source\repos\ProjetoIntegradorVB\Database\obj\Debug\Database.sqlproj.AssemblyReference.cache
+C:\Users\robso\source\repos\ProjetoIntegradorVB\Database\obj\Debug\Model.xml
+C:\Users\robso\source\repos\ProjetoIntegradorVB\Database\obj\Debug\refactor.xml
+C:\Users\robso\source\repos\ProjetoIntegradorVB\Database\obj\Debug\postdeploy.sql
+C:\Users\robso\source\repos\ProjetoIntegradorVB\Database\obj\Debug\predeploy.sql
+C:\Users\robso\source\repos\ProjetoIntegradorVB\Database\obj\Debug\Database.dll
+C:\Users\robso\source\repos\ProjetoIntegradorVB\Database\obj\Debug\Database.pdb

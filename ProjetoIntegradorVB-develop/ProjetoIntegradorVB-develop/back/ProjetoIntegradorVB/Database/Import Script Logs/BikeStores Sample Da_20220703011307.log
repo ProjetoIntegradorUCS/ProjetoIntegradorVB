@@ -1,0 +1,12 @@
+02/07/2022 22:13:07	This log contains information about the import operation of the script 'BikeStores Sample Database - create objects.sql' into project 'Database' on computer 'LAPTOP-SMS8R1FE' by user'robso.
+02/07/2022 22:13:07	Started importing file: C:\Users\robso\Downloads\SQL-Server-Sample-Database\BikeStores Sample Database - create objects.sql 
+02/07/2022 22:13:07	File name C:\Users\robso\Downloads\SQL-Server-Sample-Database\BikeStores Sample Database - create objects.sql (size: 3630)
+02/07/2022 22:13:07	Parsing import script
+02/07/2022 22:13:08	Total number of batches in script: 3
+02/07/2022 22:13:08	Total number of statements in script: 11
+02/07/2022 22:13:08	The script was successfully imported into the project.
+02/07/2022 22:13:08	Analyzing schema objects...
+02/07/2022 22:13:08	Scanning project for duplicate elements
+02/07/2022 22:13:08	Finished duplicate element processing
+02/07/2022 22:13:09	A summary of the import was saved to the following location: C:\Users\robso\source\repos\ProjetoIntegradorVB\Database\Import Script Logs\BikeStores Sample Da_20220703011307.log
+02/07/2022 22:13:09	Click Finish to continue...
