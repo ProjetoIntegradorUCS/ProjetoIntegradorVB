@@ -94,7 +94,6 @@ function getGraphData(graphJson) {
 }
 
 function loadBrandGraph(brandId) {
-    console.log(brandId);
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4) {
@@ -103,6 +102,6 @@ function loadBrandGraph(brandId) {
             }
         }
     }
-    xhttp.open("GET", "http://localhost:5000/products");
+    xhttp.open("GET", "http://localhost:5000/products?brand_id=" + brandId);
     xhttp.send();
 }
