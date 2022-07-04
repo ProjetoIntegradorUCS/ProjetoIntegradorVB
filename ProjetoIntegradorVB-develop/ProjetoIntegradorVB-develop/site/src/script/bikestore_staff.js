@@ -1,5 +1,5 @@
 var staff = {
-    vendedoresHandler: function () {
+    staffHandler: function () {
         createContentContainer('VENDEDORES', '');
         sales.loadStaffSalesGraph();
     }

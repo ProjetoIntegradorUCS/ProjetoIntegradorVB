@@ -1,4 +1,17 @@
 var sales = {
+    loadStoresSalesGraph: function () {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                if (this.status === 200) {
+                    sales.onLoadStoresSalesHandler(this.responseText);
+                }
+            }
+        }
+        xhttp.open("GET", "http://localhost:5000/sales?store=all");
+        xhttp.send();
+    },
+
     loadStaffSalesGraph: function () {
         const xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
@@ -154,6 +167,53 @@ var sales = {
                 }
             }
         });
+    },
+
+    onLoadStoresSalesHandler: function (response) {
+        var array = JSON.parse(response);
+        [xValues, yValues] = sales.getStoresSalesGraphData(array);
+        if (canvasObj) {
+            canvasObj.destroy();
+        }
+        canvasObj = new Chart(document.getElementById('myChart'), {
+            type: "pie",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: getQualitativeBackgroundColors(yValues.length),
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Vendas Lojas"
+                },
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem, data) {
+                            const total = yValues.reduce((partialSum, a) => partialSum + a, 0);
+                            const current = data['datasets'][0]['data'][tooltipItem['index']];
+                            const value = current / total;
+                            const percent = Math.trunc(value * 100);
+                            return data['labels'][tooltipItem['index']] + ': ' + percent + '% ($' + Intl.NumberFormat('en-US').format(current) + ')';
+                        }
+                    }
+                }
+            }
+        });
+    },
+
+    getStoresSalesGraphData: function (graphJson) {
+        var xValues = [];
+        var yValues = [];
+
+        for (let i = 0; i < graphJson.length; i++) {
+            xValues.push(graphJson[i]["store_name"]);
+            yValues.push(graphJson[i]["total"]);
+        }
+
+        return [xValues, yValues];
     },
 
     getBrandSalesGraphData: function (graphJson) {
