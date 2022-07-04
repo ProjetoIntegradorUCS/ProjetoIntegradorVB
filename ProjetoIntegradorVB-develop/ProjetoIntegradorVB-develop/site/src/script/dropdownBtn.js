@@ -22,7 +22,10 @@ function onLoadListHandler(response, menuId) {
         let div = document.createElement("div");
         div.textContent = element["brand_name"];
         div.className = "submenu";
-        div.addEventListener("click", function () { loadBrandGraph(element["brand_id"]); });
+        div.addEventListener("click", function () {
+            createContentContainer(element["brand_name"], "");
+            loadBrandGraph(element["brand_id"]);
+        });
         listItem.appendChild(div);
     });
 }

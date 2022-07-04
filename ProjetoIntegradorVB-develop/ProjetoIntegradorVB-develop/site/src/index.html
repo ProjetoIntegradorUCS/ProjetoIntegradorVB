@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script src="script/bikestore_brands.js"></script>
+  <script src="script/bikestore_sales.js"></script>
   <script src="script/dropdownBtn.js"></script>
+  <script src="script/contentContainer.js"></script>
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/dropdownBtn.css">
   <title>BIke Analysis</title>
@@ -26,7 +28,7 @@
         </li>
         <li class='item' data='vendas'>
           <div class="dropdown">
-            <button class="dropbtn">Vendas</button>
+            <button class="dropbtn" onclick="createContentContainer('VENDAS', createVendasSubMenu())">Vendas</button>
             <div id="dropdownVendas" class="dropdown-content"> </div>
           </div>
         </li>
