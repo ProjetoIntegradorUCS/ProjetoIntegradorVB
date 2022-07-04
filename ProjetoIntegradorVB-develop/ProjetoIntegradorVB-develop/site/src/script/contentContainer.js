@@ -1,3 +1,5 @@
+var canvasObj;
+
 function createContentContainer(title, subMenu) {
     section = document.getElementById("content");
     section.replaceChildren();
@@ -17,12 +19,20 @@ function createContentContainer(title, subMenu) {
     section.appendChild(canvas);
 }
 
+function removeCanvas() {
+    canvas = document.getElementById("myCanvas");
+    if (canvas) {
+        canvas.remove();
+    }
+}
+
 function createVendasSubMenu() {
     ul = document.createElement("ul");
     ul.classList.add('content-list');
-    list = ["MARCA", "COLABORADOR"];
+    list = ["COLABORADOR"];
     ul.appendChild(createVendasProductItemList());
     ul.appendChild(createVendasPeriodItemList());
+    ul.appendChild(createVendasMarcaItemList());
     list.forEach(element => {
         li = document.createElement("li");
         li.textContent = element;
@@ -31,10 +41,21 @@ function createVendasSubMenu() {
     return ul;
 }
 
+function createVendasMarcaItemList() {
+    li = document.createElement("li");
+    li.textContent = "MARCA";
+    li.addEventListener("click", function () {
+        removePeriodDiv();
+        sales.loadBrandSalesGraph();
+    });
+    return li;
+}
+
 function createVendasProductItemList() {
     li = document.createElement("li");
     li.textContent = "PRODUTO";
     li.addEventListener("click", function () {
+        removePeriodDiv();
         sales.loadSalesGraph();
     });
     return li;
@@ -45,15 +66,29 @@ function createVendasPeriodItemList() {
     li.textContent = "PERÍODO";
     li.addEventListener("click", function () {
         section = document.getElementById("content");
-        section.appendChild(createLabel("start", "label", "Start: "));
-        section.appendChild(createInputDate("start", "start"));
-        section.appendChild(createLabel("end", "label", "End: "));
-        section.appendChild(createInputDate("end", "end"));
-        section.appendChild(createGoButton());
-
+        section.appendChild(createPeriodDiv());
         sales.loadSalesGraph();
     })
     return li;
+}
+
+function removePeriodDiv() {
+    elem = document.getElementById("periodInput");
+    if (elem) {
+        elem.remove();
+    }
+}
+
+function createPeriodDiv() {
+    removePeriodDiv();
+    div = document.createElement("div");
+    div.setAttribute('id', 'periodInput');
+    div.appendChild(createLabel("start", "label", "Start: "));
+    div.appendChild(createInputDate("start", "start"));
+    div.appendChild(createLabel("end", "label", "End: "));
+    div.appendChild(createInputDate("end", "end"));
+    div.appendChild(createGoButton());
+    return div;
 }
 
 function createGoButton() {

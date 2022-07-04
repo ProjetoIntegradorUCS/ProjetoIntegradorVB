@@ -39,7 +39,10 @@ function getQualitativeBackgroundColors(size) {
 function onLoadHandler(response) {
     var array = JSON.parse(response);
     [xValues, yValues] = getGraphData(array);
-    new Chart(document.getElementById('myChart'), {
+    if (canvasObj) {
+        canvasObj.destroy();
+    }
+    canvasObj = new Chart(document.getElementById('myChart'), {
         type: "pie",
         data: {
             labels: xValues,
