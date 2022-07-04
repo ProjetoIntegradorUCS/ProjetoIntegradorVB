@@ -29,16 +29,23 @@ function removeCanvas() {
 function createVendasSubMenu() {
     ul = document.createElement("ul");
     ul.classList.add('content-list');
-    list = ["COLABORADOR"];
+
     ul.appendChild(createVendasProductItemList());
     ul.appendChild(createVendasPeriodItemList());
     ul.appendChild(createVendasMarcaItemList());
-    list.forEach(element => {
-        li = document.createElement("li");
-        li.textContent = element;
-        ul.appendChild(li);
-    });
+    ul.appendChild(createVendasColaboradorItemList());
+
     return ul;
+}
+
+function createVendasColaboradorItemList() {
+    li = document.createElement("li");
+    li.textContent = "COLABORADOR";
+    li.addEventListener("click", function () {
+        removePeriodDiv();
+        sales.loadStaffSalesGraph();
+    });
+    return li;
 }
 
 function createVendasMarcaItemList() {
