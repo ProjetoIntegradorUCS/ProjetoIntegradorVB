@@ -120,7 +120,7 @@ var sales = {
             }
         });
     },
-    
+
     onLoadStaffSalesHandler: function (response) {
         var array = JSON.parse(response);
         [xValues, yValues] = sales.getStaffSalesGraphData(array);
@@ -139,7 +139,7 @@ var sales = {
             options: {
                 title: {
                     display: true,
-                    text: "Vendas Marcas"
+                    text: "Vendas Vendedores"
                 },
                 tooltips: {
                     callbacks: {
