@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\robso\\Documents\\GitHub\\ProjetoIntegradorVB\\back\\PIVB\\PIVB\\PIVB.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\robso\\Documents\\GitHub\\ProjetoIntegradorVB\\back\\PIVB\\PIVB\\PIVB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\robso\\Documents\\GitHub\\ProjetoIntegradorVB\\back\\PIVB\\PIVB\\PIVB.csproj",
+        "projectName": "PIVB",
+        "projectPath": "C:\\Users\\robso\\Documents\\GitHub\\ProjetoIntegradorVB\\back\\PIVB\\PIVB\\PIVB.csproj",
+        "packagesPath": "C:\\Users\\robso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\robso\\Documents\\GitHub\\ProjetoIntegradorVB\\back\\PIVB\\PIVB\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\robso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://10.62.38.88:8088/repository/nuget-hosted": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nexus.maximatech.com.br/repository/nuget-hosted/": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
