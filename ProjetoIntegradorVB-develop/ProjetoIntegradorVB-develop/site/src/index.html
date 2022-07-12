@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="script/bikestore_brands.js"></script>
+  <script src="script/bikestore_sales.js"></script>
+  <script src="script/bikestore_staff.js"></script>
+  <script src="script/bikestore_stores.js"></script>
+  <script src="script/dropdownBtn.js"></script>
+  <script src="script/contentContainer.js"></script>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/dropdownBtn.css">
+  <title>BIke Analysis</title>
+</head>
+
+<body>
+  <section class='menu-container'>
+    <h1>bike analysis</h1>
+    <nav>
+      <ul>
+        <li id='menuMarcas' class='item' data='marcas'>
+          <div class="dropdown">
+            <button onclick="toggleMarcas()" class="dropbtn">Marcas</button>
+            <div id="dropdownMarcas" class="dropdown-content"> </div>
+          </div>
+        </li>
+        <li class='item' data='vendas'>
+          <div class="dropdown">
+            <button class="dropbtn" onclick="createContentContainer('VENDAS', createVendasSubMenu())">Vendas</button>
+            <div id="dropdownVendas" class="dropdown-content"> </div>
+          </div>
+        </li>
+        <li class='item' data='vendedores'>
+          <div class="dropdown">
+            <button class="dropbtn" onclick="staff.staffHandler()">Vendedores</button>
+            <div id="dropdownVendedores" class="dropdown-content"> </div>
+          </div>
+        </li>
+        <li class='item' data='lojas'>
+          <div class="dropdown">
+            <button class="dropbtn" onclick="stores.storesHandler()">Lojas</button>
+            <div id="dropdownLojas" class="dropdown-content"> </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <section id="content" class='content-container'>
+    <h2 id="contentTitle">Vendas</h2>
+    <ul class="content-list">
+      <li>PRODUTO</li>
+      <li>PERÍODO</li>
+      <li>MARCA</li>
+      <li>COLABORADOR</li>
+    </ul>
+    <canvas id="myChart" class="canvas"></canvas>
+  </section>
+
+</body>
+
+</html>
