@@ -8,6 +8,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script src="script/bikestore_brands.js"></script>
   <script src="script/bikestore_sales.js"></script>
+  <script src="script/bikestore_staff.js"></script>
+  <script src="script/bikestore_stores.js"></script>
   <script src="script/dropdownBtn.js"></script>
   <script src="script/contentContainer.js"></script>
   <link rel="stylesheet" href="style/style.css">
@@ -48,59 +50,16 @@
     </nav>
   </section>
 
-  <section class='content-container'>
-    <h2>Vendas</h2>
+  <section id="content" class='content-container'>
+    <h2 id="contentTitle">Vendas</h2>
     <ul class="content-list">
       <li>PRODUTO</li>
       <li>PERÍODO</li>
       <li>MARCA</li>
       <li>COLABORADOR</li>
     </ul>
-    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    <canvas id="myChart" class="canvas"></canvas>
   </section>
-
-
-  <div id="vendas-Produto">
-    <div class='header-content'>
-      <div class="header">
-          <h3>Vendas por produto</h3>
-          <p>Lista dos produtos mais vendidos.</p>
-        <!--listar 5 produtos mais vendidos e quantidade-->
-      </div>
-    </div>
-  </div> 
-
-  <div id="vendas-Periodo">
-    <div class="header-content">
-      <div class="header">
-          <h3>Vendas por periodo</h3>
-          <p>Lista dos produtos mais vendidos por mês.</p>
-        <!--listar produto mais vendido e o mês de ref.-->
-      </div>
-    </div>
-  </div> 
-
-  <div id="vendas-Marca">
-    <div class="header-content">
-      <div class="header">
-          <h3>Vendas por marca</h3>
-          <p>Marcas mais vendidas.</p>
-        <!--listar produto mais vendido de cada marca-->
-      </div>
-    </div>
-  </div> 
-
-  <div id="vendas-Colaborador">
-    <div class="header-content">
-      <div class="header">
-          <h3>Vendas por colaborador</h3>
-          <p>Colaboradores com mais vendas.</p>
-        <!--ranking dos colabores e quantidade de vendas relacionadas e eles-->
-      </div>
-    </div>
-  </div> 
-
-
 
 </body>
 
